@@ -5,9 +5,9 @@ RUN apt-get install -y build-essential checkinstall libreadline-gplv2-dev libncu
 
 RUN mkdir /tmp/Python37
 WORKDIR /tmp/Python37
-RUN wget https://www.python.org/ftp/python/3.7.5/Python-3.7.5.tar.xz
-RUN tar xvf Python-3.7.5.tar.xz
-WORKDIR /tmp/Python37/Python-3.7.5
+RUN wget https://www.python.org/ftp/python/3.7.6/Python-3.7.6.tar.xz
+RUN tar xvf Python-3.7.6.tar.xz
+WORKDIR /tmp/Python37/Python-3.7.6
 RUN ./configure --enable-optimizations
 RUN make altinstall
 
