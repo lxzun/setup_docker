@@ -18,4 +18,6 @@ RUN pip3.7 install torch-1.1.0-cp37-cp37m-linux_x86_64.whl jupyterlab
 RUN jupyter lab --generate-config
 COPY jupyter_notebook_config.py /root/.jupyter/jupyter_notebook_config.py
 
-ENTRYPOINT ["/bin/bash"]
+WORKDIR /home
+EXPOSE 8888
+CMD jupyter lab --allow-root
